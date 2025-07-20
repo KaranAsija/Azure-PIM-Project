@@ -41,7 +41,7 @@ azure-pim-project/
 ├── 08-break-glass-accounts.md
 ├── 09-eligible-active-roles.md
 ├── 10-role-time-limits.md
-└── 11-best-practices.md
+
 ```
 
 ---
