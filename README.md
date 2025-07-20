@@ -2,19 +2,19 @@
 
 
 
-## 🚀 **Project Overview**
+##  **Project Overview**
 
 This repository contains a comprehensive theoretical implementation of **Azure Privileged Identity Management (PIM)**. The project was undertaken as part of my final internship deliverable to demonstrate:
 
-✅ Planning and configuration of **Just-In-Time (JIT)** privileged access  
-✅ Management of **Azure AD roles and Azure resources** via PIM  
-✅ Implementation of **approval workflows**, **break-glass accounts**, and **audit analysis**
+* Planning and configuration of **Just-In-Time (JIT)** privileged access  
+* Management of **Azure AD roles and Azure resources** via PIM  
+* Implementation of **approval workflows**, **break-glass accounts**, and **audit analysis**
 
 Due to licensing constraints (absence of Azure AD Premium P2 in my student subscription), the project focuses on **detailed step-by-step theoretical configurations** aligned with industry best practices.
 
 ---
 
-## 🎯 **Objectives**
+## **Objectives**
 
 - Explain the **purpose and benefits** of PIM within an organization’s security strategy
 - Configure **JIT access** for Azure AD and resource roles
@@ -26,7 +26,7 @@ Due to licensing constraints (absence of Azure AD Premium P2 in my student subsc
 
 ---
 
-## 🗂️ **Repository Structure**
+##  **Repository Structure**
 ```
 azure-pim-project/
 │
@@ -64,7 +64,7 @@ azure-pim-project/
 
 ---
 
-## 🔑 **Security Best Practices Implemented**
+## **Security Best Practices Implemented**
 
 - Enforcing **Zero Standing Access (ZSA)**
 - Mandatory **MFA** for privileged activations
@@ -75,7 +75,7 @@ azure-pim-project/
 
 ---
 
-## 📚 **Learning Outcomes**
+## **Learning Outcomes**
 
 Through this project, I:
 
