@@ -79,9 +79,9 @@ azure-pim-project/
 
 Through this project, I:
 
-✅ Strengthened my understanding of **cloud identity governance and privileged access management**  
-✅ Developed structured documentation skills aligned with **industry standards**  
-✅ Enhanced readiness for **cloud security and IAM roles** in upcoming placements
+* Strengthened my understanding of **cloud identity governance and privileged access management**  
+* Developed structured documentation skills aligned with **industry standards**  
+* Enhanced readiness for **cloud security and IAM roles** in upcoming placements
 
 ---
 
