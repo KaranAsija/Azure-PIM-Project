@@ -7,21 +7,36 @@ Extend PIM to manage Azure resource-level privileges (subscriptions, resource gr
 
 ---
 
-## Theoretical Steps
+## Steps
 
-1. Go to **Azure AD PIM ➔ Azure resources**  
-2. Select the desired **subscription/resource group/resource**  
-3. Click **Manage resource roles**  
-4. Choose a role (e.g., Owner, Contributor)  
-5. Click **Add assignment ➔ Select member ➔ Eligible**  
-6. Configure:
-   - Activation duration
-   - Approval workflow
-   - MFA enforcement
-7. Save configurations
+**Onboard Azure Resources**
+
+* Go to PIM > Azure Resources.
+
+* Add Subscriptions/Resource Groups for PIM management.
+
+**Assign Resource Roles**
+
+* Define which roles (Owner, Contributor, Reader) need privileged access in each resource.
+
+* E.g., assign UserC as Eligible Owner of “ResourceGroupDemo.”
+
+**Configure Activation and Approval**
+
+* Duration (default: 2 hours).
+
+* Approval required: Yes (assign approvers: e.g., Resource Owner).
+
+* MFA enforced at activation.
+
+* Justification required for tracking.
+
+| User | Resource |	Role | Assignment Type |Approval	| Max Duration |
+|------|----------|-------|-----------------|---------|--------------|
+|UserC |	ResourceGroupDemo|Owner|Eligible|Yes|	2 hours|
 
 ---
 
-🔎 **Use Case**
+**Use Case**
 
 Provides DevOps or platform teams with temporary elevated access for deployments or resource management while maintaining strong security controls.
