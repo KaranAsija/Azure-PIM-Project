@@ -26,7 +26,7 @@ Due to licensing constraints (absence of Azure AD Premium P2 in my student subsc
 
 ---
 
-##  **Repository Structure**
+## **Repository Structure**
 ```
 azure-pim-project/
 │
@@ -46,7 +46,7 @@ azure-pim-project/
 
 ---
 
-## ⚙️ **Key Topics Covered**
+##  **Key Topics Covered**
 
 | FILE | CONTENT |
 |---------|----------------|
