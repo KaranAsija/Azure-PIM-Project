@@ -11,7 +11,7 @@ Enforce an approval workflow for all PIM role activations to enhance control and
 
 **1. Open Azure Portal and Access PIM**
 
-* Go to https://portal.azure.com
+* Go to https://portal.azure.com 
 
 * Sign in with Global Administrator or Privileged Role Administrator rights.
 
@@ -25,11 +25,11 @@ Enforce an approval workflow for all PIM role activations to enhance control and
 
 * Under PIM, select the appropriate scope:
 
-  * Azure AD roles for directory roles
+  * Azure AD roles for directory roles.
 
-  * Azure resources for Azure subscriptions/resource roles
+  * Azure resources for Azure subscriptions/resource roles.
 
-  * Groups for privileged access groups
+  * Groups for privileged access groups.
 
 * Choose the desired role (e.g., Global Administrator).
 
@@ -62,6 +62,7 @@ Enforce an approval workflow for all PIM role activations to enhance control and
 **4. User Activation (Request) Process**
 
 * For an Eligible User:
+  
   * Sign in to the Azure portal.
 
   * Navigate to PIM > My roles (for roles) or My requests (for group/resource access).
@@ -100,7 +101,7 @@ Enforce an approval workflow for all PIM role activations to enhance control and
 
 ## **Approval Flow**
 
-User requests activation ➔ Approver receives notification ➔ Approver approves ➔ User gains temporary privileged access ➔ Access expires after duration.
+User requests activation -> Approver receives notification -> Approver approves -> User gains temporary privileged access -> Access expires after duration.
 
 ---
 
