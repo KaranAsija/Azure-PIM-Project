@@ -17,7 +17,7 @@
 
 **2. Create and Prepare the Security Group**
 
-* Go to Azure Active Directory > Groups > New Group.
+* Go to Azure Active Directory -> Groups -> New Group.
 
 * Select Security as the group type.
 
@@ -77,7 +77,7 @@
 
 * Eligible users do not belong to the group by default.
 
-* The user logs into Azure and goes to PIM > Groups > My groups.
+* The user logs into Azure and goes to PIM -> Groups -> My groups.
 
 * They find the eligible group and click Activate.
 
