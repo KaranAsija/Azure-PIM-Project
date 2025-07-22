@@ -29,11 +29,11 @@ Azure Privileged Identity Management (PIM) extends just-in-time access controls 
 
 **2. Open Privileged Identity Management for Azure Resources**
 
-* In the left navigation pane, select `Azure Active Directory`.
+* In the left navigation pane, select Azure Active Directory.
 
-* Under Manage, click `Privileged Identity Management`.
+* Under Manage, click Privileged Identity Management.
 
-* In PIM, select `Azure resources`.
+* In PIM, select Azure resources.
 
 **3. Onboard (Register) the Resource for PIM**
 
@@ -51,7 +51,7 @@ Azure Privileged Identity Management (PIM) extends just-in-time access controls 
 
   * Select the resource (e.g., Subscription1).
 
-  * Click Manage > Roles.
+  * Click Manage -> Roles.
 
   * Choose a role (e.g., Owner, Contributor, Reader).
 
