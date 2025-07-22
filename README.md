@@ -10,7 +10,7 @@ This repository contains a comprehensive theoretical implementation of **Azure P
 * Management of **Azure AD roles and Azure resources** via PIM  
 * Implementation of **approval workflows**, **break-glass accounts**, and **audit analysis**
 
-Due to licensing constraints (absence of Azure AD Premium P2 in my student subscription), the project focuses on **detailed step-by-step theoretical configurations** aligned with industry best practices.
+**Due to licensing constraints (absence of Azure AD Premium P2 in my student subscription), the project focuses on detailed step-by-step theoretical configurations aligned with industry best practices.**
 
 ---
 
