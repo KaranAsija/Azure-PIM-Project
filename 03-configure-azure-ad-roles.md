@@ -19,9 +19,9 @@ Implementing PIM for Azure AD roles is critical for limiting the risk of excessi
 
 * In the left-hand menu, select Azure Active Directory.
 
-* Under Manage, click Privileged Identity Management.
+* **Under Manage,** click Privileged Identity Management.
 
-* Click Azure AD roles to manage directory roles with PIM.
+* Click Azure AD roles to **manage** directory roles with PIM.
 
 **3. Onboard Roles into PIM**
 
@@ -50,7 +50,7 @@ Implementing PIM for Azure AD roles is critical for limiting the risk of excessi
   * Assignment type: Set as Eligible (can request activation) or Active (immediate assignment, generally for break-glass accounts).
 
   * (Optional) Configure start and end dates for temporary eligibility.
-
+    
   * Finalize by clicking Add or Assign.
 
 **5. Configure Role Activation Settings**
