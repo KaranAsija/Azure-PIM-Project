@@ -27,17 +27,17 @@ Privileged Identity Management (PIM) provides built-in auditing and reporting to
 
 * Sign in with appropriate privileges (e.g., Global Admin, PIM admin).
 
-* Navigate: Azure Active Directory > Privileged Identity Management
+* Navigate: Azure Active Directory > Privileged Identity Management.
 
 **2. Select the Appropriate Audit Scope**
 
 * Depending on what you want to audit, choose from:
 
-    * Azure AD roles for directory role activations/changes
+    * Azure AD roles for directory role activations/changes.
 
-    * Azure resources for subscription/resource activations/changes
+    * Azure resources for subscription/resource activations/changes.
 
-    * Groups for privileged access group membership changes
+    * Groups for privileged access group membership changes.
 
 **3. Access Audit History**
 
@@ -47,15 +47,15 @@ Privileged Identity Management (PIM) provides built-in auditing and reporting to
 
     * Date/time
 
-    * Event type (Activation, Assignment, Approval, Denial, etc.)
+    * Event type (Activation, Assignment, Approval, Denial, etc.).
 
-    * User (requestor, approver)
+    * User (requestor, approver).
 
-    * Role or group
+    * Role or group.
 
-    * Status (Success, Failed)
+    * Status (Success, Failed).
 
-    * Justification/reason
+    * Justification/reason.
 
 **4. Filter and Search**
 
