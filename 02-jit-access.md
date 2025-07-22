@@ -25,11 +25,11 @@
 
 * Navigate to PIM:
 
-   * Select Azure Active Directory > Privileged Identity Management.
+   * Select Azure Active Directory -> Privileged Identity Management.
 
 * Assign User as Eligible:
 
-   * Click Azure AD roles > Roles.
+   * Click Azure **AD** roles -> Roles.
 
    * Pick the privileged role (e.g., Global Administrator).
 
@@ -47,7 +47,7 @@ For each eligible assignment, set the following controls:
 
 * Approval Workflow:
 
-   * Define if manager/peer approval is required before activation.
+   * Define if **manager/peer** approval is required before activation.
 
 * Multi-Factor Authentication (MFA): Enforce MFA before the role is activated.
 
@@ -61,7 +61,7 @@ For each eligible assignment, set the following controls:
 
 * Go to My Roles in PIM:
 
-   * Azure AD > Privileged Identity Management > My roles.
+   * Azure AD -> Privileged Identity Management -> My roles.
 
 * Request Activation:
 
