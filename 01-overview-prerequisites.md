@@ -32,9 +32,9 @@
 
 ### Setup Steps
 
-1. **Navigate:** Azure Portal ➔ Azure Active Directory ➔ Privileged Identity Management  
+1. **Navigate:** Azure Portal -> Azure Active Directory -> Privileged Identity Management  
 2. **Onboard PIM:** Click **Consent to PIM** if using for the first time  
-3. **Verify License:** Azure AD ➔ Licenses ➔ All products ➔ Ensure Azure AD Premium P2 is available  
+3. **Verify License:** Azure AD -> Licenses -> All products -> Ensure Azure AD Premium P2 is available  
 4. **Assign Permissions:** Confirm your account has necessary administrative roles
 
 ---
