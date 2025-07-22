@@ -63,7 +63,7 @@
 
    * Signs in to the Azure portal.
 
-   * Navigates to Azure AD > Privileged Identity Management > My roles.
+   * Navigates to Azure AD -> Privileged Identity Management -> My roles.
 
    * Locates the eligible role and clicks Activate.
 
