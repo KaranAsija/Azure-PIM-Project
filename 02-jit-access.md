@@ -17,6 +17,8 @@
 
 * Enforces Least-Privilege: Users only possess high-level privileges for the minimum time required.
 
+---
+
 ## Steps
 
 **1. Set Up Eligible Role Assignment**
