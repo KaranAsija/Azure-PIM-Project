@@ -1,44 +1,112 @@
-# 03. Configure Azure AD Roles in PIM
+# 03. Configure Azure resources in PIM
 
 
 ## Objective
 
-Configure Azure AD roles in PIM to enforce Just-In-Time activation and approval workflows for least privilege management.
+Azure Privileged Identity Management (PIM) extends just-in-time access controls not only to directory roles, but also to resources such as Azure subscriptions, management groups, resource groups, and individual resources (like VMs). Configuring PIM for these resources ensures that critical cloud assets are protected and governed under the same access discipline as Azure AD roles.
 
 ---
 
-## Theoretical Steps
+## Key Features
 
-**Onboard Roles to PIM**
+**Limits Standing Privileges:** Assigns eligible, rather than permanent, rights to key resources.
 
-* Navigate to Azure Active Directory > Privileged Identity Management > Azure AD roles.
+**Reduces Risk Window:** Temporary access prevents long-term misuse or external attack.
 
-* Select “Manage” and choose “Roles".
+**Enforces Approval and Audit:** Every privilege elevation is tracked, reviewable, and (optionally) requires sign-off.
 
-* Choose the role (e.g., Global Administrator), then select “Assign” to onboard it into PIM.
+**Supports Compliance:** Meets standards requiring access controls and full logging on sensitive resources.
 
-**Settings**
+--- 
 
-* Activation Duration: Set time (e.g., 1 hour per activation).
+## Steps
 
-* Approval: Require approval from specified users or roles before activation.
+**1. Sign In and Open the Azure Portal**
 
-* Multi-factor Authentication (MFA): Enforce MFA at activation.
+* Go to https://portal.azure.com
 
-* Justification: Ask users to provide reasons for activation.
+* Sign in with a user account assigned as Global Administrator, Privileged Role Administrator, or Resource Owner.
 
-**Assign Eligible Users**
-* Assign users as “Eligible” for specific roles:
+**2. Open Privileged Identity Management for Azure Resources**
 
-* Eligible users can activate their role as needed.
+* In the left navigation pane, select `Azure Active Directory`.
 
-* Assignments can be permanent or time-bound.
+* Under Manage, click `Privileged Identity Management`.
 
-## Sample Assignment Table:
-| User |	Role | Assignment | Type | Approval Required | Duration |
-|------|-------|------------|------|---------------------|----------|
-| UserA |	Global | Admin | Eligible|	Yes |	1 hour |
-|UserB |	Security | Admin |	Permanent |	No |	N/A |
+* In PIM, select `Azure resources`.
+
+**3. Onboard (Register) the Resource for PIM**
+
+* Click Discover resources.
+
+* In the list, select the subscription, management group, or resource group you want to manage.
+
+* Click Manage resource to register it with PIM if it’s not already managed.
+
+* Only registered resources will be controlled via PIM.
+
+**4. Assign Roles via PIM**
+
+* For each onboarded resource, follow these steps:
+
+  * Select the resource (e.g., Subscription1).
+
+  * Click Manage > Roles.
+
+  * Choose a role (e.g., Owner, Contributor, Reader).
+
+  * Click Add assignments.
+
+Assignment options:
+
+  * Assignment type: Choose between Eligible (can activate when needed) and Active (immediately assigned; use only for emergencies).
+
+  * Select members: Choose users or groups.
+
+  * Start date/End date: Optionally set a limited period for eligibility.
+
+* Confirm and finalize the assignments.
+
+**5. Configure Settings & Activation Policies**
+
+* For each role (per resource), you can enforce additional controls:
+
+  * Activation maximum duration: Set how long a user can be active per activation (e.g., 1 or 2 hours).
+
+  * Multi-Factor Authentication: Require MFA on elevation.
+
+  * Justification requirement: Force users to enter a reason each time they request activation.
+
+  * Approval workflow: Designate one or more required approvers for each activation.
+
+  * Notification: Enable alerting when activations occur.
+
+  * Require ticket information: For integration with ITSM or helpdesk ticketing systems.
+
+  To access these options:
+
+  * Select the resource in PIM.
+
+  * Navigate to Settings > Role settings.
+
+  * Configure each parameter and save changes.
+
+**6. User Activation Flow**
+
+* For Eligible Users:
+
+  * The eligible user goes to the Azure portal > PIM > Azure resources > My roles.
+
+  * Selects the appropriate resource and role, then clicks Activate.
+
+  * Fills in required justification, ticket number (if needed), and desired duration.
+
+   Completes MFA if required.
+
+  * If approval is needed, request is routed to approvers.
+
+  * Upon approval, user’s permissions are elevated for the allowed period.
+
 
 
 ---
