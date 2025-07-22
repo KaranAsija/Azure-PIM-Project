@@ -1,116 +1,89 @@
-# 03. Configure Azure resources in PIM
+# 03. Configure Azure roles in PIM
 
 
 ## Objective
 
-Azure Privileged Identity Management (PIM) extends just-in-time access controls not only to directory roles, but also to resources such as Azure subscriptions, management groups, resource groups, and individual resources (like VMs). Configuring PIM for these resources ensures that critical cloud assets are protected and governed under the same access discipline as Azure AD roles.
+Implementing PIM for Azure AD roles is critical for limiting the risk of excessive or misused privileged access. The process involves onboarding high-privilege roles to PIM, customizing activation and approval settings, and maintaining clear, auditable assignments.
 
 ---
-
-## Key Features
-
-**Limits Standing Privileges:** Assigns eligible, rather than permanent, rights to key resources.
-
-**Reduces Risk Window:** Temporary access prevents long-term misuse or external attack.
-
-**Enforces Approval and Audit:** Every privilege elevation is tracked, reviewable, and (optionally) requires sign-off.
-
-**Supports Compliance:** Meets standards requiring access controls and full logging on sensitive resources.
-
---- 
 
 ## Steps
 
-**1. Sign In and Open the Azure Portal**
+**1. Open Azure AD in the Azure Portal**
 
-* Go to https://portal.azure.com
+* Navigate to https://portal.azure.com.
 
-* Sign in with a user account assigned as Global Administrator, Privileged Role Administrator, or Resource Owner.
+* Sign in with an account that has Global Administrator or Privileged Role Administrator rights.
 
-**2. Open Privileged Identity Management for Azure Resources**
+**2. Access Privileged Identity Management**
 
-* In the left navigation pane, select `Azure Active Directory`.
+* In the left-hand menu, select Azure Active Directory.
 
-* Under Manage, click `Privileged Identity Management`.
+* Under Manage, click Privileged Identity Management.
 
-* In PIM, select `Azure resources`.
+* Click Azure AD roles to manage directory roles with PIM.
 
-**3. Onboard (Register) the Resource for PIM**
+**3. Onboard Roles into PIM**
 
-* Click Discover resources.
+* Within Azure AD roles, click Roles to see all eligible roles.
 
-* In the list, select the subscription, management group, or resource group you want to manage.
+* Identify roles that are highly privileged or sensitive, such as:
 
-* Click Manage resource to register it with PIM if it’s not already managed.
+  * Global Administrator
 
-* Only registered resources will be controlled via PIM.
+  * Security Administrator
 
-**4. Assign Roles via PIM**
+  * User Administrator
 
-* For each onboarded resource, follow these steps:
+  * Application Administrator
 
-  * Select the resource (e.g., Subscription1).
+* For each role, click on it and ensure it is enabled for PIM management.
 
-  * Click Manage > Roles.
+**4. Assign Users as Eligible or Active**
 
-  * Choose a role (e.g., Owner, Contributor, Reader).
+* In the chosen role (e.g., Global Administrator), click Add assignments.
 
-  * Click Add assignments.
+* In the assignment dialog:
 
-Assignment options:
+  * Select users: Choose the users to be assigned.
 
-  * Assignment type: Choose between Eligible (can activate when needed) and Active (immediately assigned; use only for emergencies).
+  * Assignment type: Set as Eligible (can request activation) or Active (immediate assignment, generally for break-glass accounts).
 
-  * Select members: Choose users or groups.
+  * (Optional) Configure start and end dates for temporary eligibility.
 
-  * Start date/End date: Optionally set a limited period for eligibility.
+  * Finalize by clicking Add or Assign.
 
-* Confirm and finalize the assignments.
+**5. Configure Role Activation Settings**
 
-**5. Configure Settings & Activation Policies**
+* For each onboarded role, set up robust security requirements.
 
-* For each role (per resource), you can enforce additional controls:
+ * **Set Activation Duration:** Choose the maximum session time allowed per activation (e.g., 1 hour, 2 hours).
 
-  * Activation maximum duration: Set how long a user can be active per activation (e.g., 1 or 2 hours).
+ * **Require Multi-Factor Authentication (MFA):** Toggle to require an extra authentication step at activation time.
 
-  * Multi-Factor Authentication: Require MFA on elevation.
+ * **Mandate Justification:** Require the user to provide a business reason each time they activate the role.
 
-  * Justification requirement: Force users to enter a reason each time they request activation.
+ * **Approval Workflow:** Specify if activation requires review and approval.
 
-  * Approval workflow: Designate one or more required approvers for each activation.
+ * Assign one or more approvers for the role (e.g., another admin, team lead).
 
-  * Notification: Enable alerting when activations occur.
+ * **Notifications:** Enable email or portal alerts for each activation to inform security or monitoring personnel.
 
-  * Require ticket information: For integration with ITSM or helpdesk ticketing systems.
+ How to Set These:
 
-  To access these options:
+ * Within the role’s page in PIM, click Settings or Role settings.
 
-  * Select the resource in PIM.
-
-  * Navigate to Settings > Role settings.
-
-  * Configure each parameter and save changes.
-
-**6. User Activation Flow**
-
-* For Eligible Users:
-
-  * The eligible user goes to the Azure portal > PIM > Azure resources > My roles.
-
-  * Selects the appropriate resource and role, then clicks Activate.
-
-  * Fills in required justification, ticket number (if needed), and desired duration.
-
-   Completes MFA if required.
-
-  * If approval is needed, request is routed to approvers.
-
-  * Upon approval, user’s permissions are elevated for the allowed period.
-
+ * Adjust the parameters detailed above and save changes.
 
 
 ---
 
-**Real-World Application**
+**Best Practices**
 
-Used by IAM and security teams to control administrative access for IT operations, deployments, and incident responses.
+* Default to Eligible status for all privileged roles; only use Active for break-glass/emergency accounts.
+
+* Require approval and MFA for all sensitive roles.
+
+* Keep activation durations as short as operationally possible.
+
+* Document all assignment and policy decisions as part of compliance.
