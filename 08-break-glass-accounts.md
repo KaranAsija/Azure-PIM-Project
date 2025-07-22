@@ -22,9 +22,9 @@
 
 **2. Create Break Glass Accounts**
 
-* Go to Azure Active Directory > Users > New user
+* Go to Azure Active Directory -> Users -> New user.
 
-* Enter account details (e.g., username: BreakGlassAdmin1)
+* Enter account details (e.g., username: BreakGlassAdmin1).
 
 * Set up strong, random passwords; record for secure storage.
 
@@ -46,11 +46,11 @@
 
 **4. Exclude from Conditional Access & MFA.**
 
-* Go to Azure AD > Security > Conditional Access > Policies.
+* Go to Azure AD -> Security -> Conditional Access -> Policies.
 
 * Edit each policy and add break glass accounts to the Excluded users list.
 
-* Under Security > Multi-Factor Authentication, verify MFA is not enforced for these accounts.
+* Under Security -> Multi-Factor Authentication, verify MFA is not enforced for these accounts.
 
 **5. Secure Account Credentials**
 
