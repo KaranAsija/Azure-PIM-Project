@@ -37,6 +37,4 @@
 3. **Verify License:** Azure AD -> Licenses -> All products -> Ensure Azure AD Premium P2 is available  
 4. **Assign Permissions:** Confirm your account has necessary administrative roles
 
----
 
-**Note:** In this theoretical project, configurations are documented without practical implementation due to licensing constraints.
